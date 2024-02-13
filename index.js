@@ -23,8 +23,17 @@ NormalScale = {
 }
 
 
+document.addEventListener('DOMContentLoaded', myFunction);
+function myFunction() {
+  let arr;
+  arr = JSON.parse(localStorage.arr);
+  for(i = 0; i < 7; i++) {
+    document.getElementById("class" + (i+1)).value = arr[i][1];
+    document.getElementById("class" + (i+1) + "select").value = arr[i][0];
+  }
+}
+
 function calculateGPA() {
-  // Initialize an empty object
 inputtedGrades = {};
 
 grades = [
@@ -47,37 +56,54 @@ classValue = [
   document.getElementById("class7select").value
 ]
 
+
+
+
 var totalGPA = 0;
 var academicClasses = 7;
+var arr = [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+];
 
+for (i = 0; i < 7; i++) {
+  arr[i][0] = classValue[i];
+  arr[i][1] = grades[i];
+  if (grades[i] != 0) {
+    if (classValue[i] == "AP") {
+      totalGPA += APScale[grades[i]];
+      //console.log(totalGPA)
+    }
+    if (classValue[i] == "Honors") {
+      totalGPA += HonorsScale[grades[i]];
+      //console.log(totalGPA)
+    }
+    if (classValue[i] == "Normal") {
+      totalGPA += NormalScale[grades[i]];
+      //console.log(totalGPA)
+    }
+  } else {
+    academicClasses -= 1;
+    //console.log(academicClasses)
+  }
+}
 
-  for (i = 0; i<7; i++) {
-    if (grades[i] != 0) {
-      if (classValue[i] == "AP") {
-        totalGPA += APScale[grades[i]]
-        console.log(totalGPA)
-      }
-      if (classValue[i] == "Honors") {
-        totalGPA += HonorsScale[grades[i]]
-        console.log(totalGPA)
-      }
-      if (classValue[i] == "Normal") {
-        totalGPA += NormalScale[grades[i]]
-        console.log(totalGPA)
-      }
-    }
-    else {
-      academicClasses -= 1
-      console.log(academicClasses)
-    }
-     
-  }  
-  if (academicClasses>= 6) {
-    totalGPA++
-  } 
-  console.log(academicClasses)
-  console.log(totalGPA/academicClasses)
-  document.getElementById("result").innerHTML = "GPA: " + totalGPA/academicClasses
+if (academicClasses >= 6) {
+  totalGPA++;
+}
+
+console.log(arr);
+localStorage.arr = JSON.stringify(arr);
+//console.log(totalGPA/academicClasses)
+  console.log(localStorage.arr);
+  gpa = (totalGPA / academicClasses).toFixed(3);
+
+  document.getElementById("result").innerHTML = "GPA: " + gpa;
 }
 
 grades = {

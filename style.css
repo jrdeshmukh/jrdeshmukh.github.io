@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+
 * {
   font-family: "Poppins", sans-serif;
 }
+
 @media only screen and (min-width: 0px) {
   html {
     zoom: 0.5;
   }
 }
+
 .class-container {
   display: flex;
   flex-direction: row; /* Change to row to place them side by side */
@@ -20,9 +23,13 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: #063362;
+  zoom: 150%;
+  background-color: #1e1e1e; /* Dark gray */
+  width: device-width;
+  background-color: #0d1321;  /*Dark gray */
 }
-/*set font and background color*/
+
+/* Set font and background color */
 @media only screen and (min-width: 600px) {
   html {
     zoom: 0.6;
@@ -41,11 +48,7 @@ body {
   }
 }
 
-body {
-  zoom: 150%;
-  background-color: #063362;
-  width: device-width;
-}
+
 ul {
   text-align: center;
   display: flex;
@@ -55,8 +58,9 @@ ul {
   align-items: center;
   justify-content: center;
 }
+
 label {
-  color: white;
+  color: #ffffff; /* White */
   text-align: center;
   display: flex;
   list-style: inside;
@@ -66,9 +70,8 @@ label {
   justify-content: center;
 }
 
-
 [class="text"] {
-  color: white;
+  color: #ffffff; /* White */
   text-align: center;
   display: inline-block;
   list-style: inside;
@@ -76,48 +79,44 @@ label {
   margin-left: auto;
   align-items: center;
   justify-content: center;
+  background-color: #333333; /* Dark gray */
+  color: #ffffff; /* White */
+  padding: 10px;
+  border-radius: 10px; /* Rounded corners */
 }
-/*style the heading*/
+
+/* Style the heading */
 h1 {
   text-align: center;
   margin-top: 50px;
-  color: white;
+  color: #ffffff; /* White */
   font-size: 40px;
   font-weight: 600;
 }
 
-
-
-
-
-
-
-/*style the join room button*/
-
-/*style the leave room button*/
-
+/* Style the join room button */
+/* Style the leave room button */
 
 input[type="text"],
 select {
-    /* Remove flex styles and adjust width as needed */
-    display: flex;
-    text-align: center;
-    margin: 0 10px; /* Adjust spacing between input and select elements */
-    width: 150px; /* Adjust width as needed */
-    height: 30px;
-    border-style: solid;
-    border-color: white;
-    background-color: white;
-    border-radius: 20px 20px;
-    color: #008ad8;
-    font-size: 16px;
+  /* Remove flex styles and adjust width as needed */
+  display: flex;
+  text-align: center;
+  margin: 0 10px; /* Adjust spacing between input and select elements */
+  width: 150px; /* Adjust width as needed */
+  height: 30px;
+  border-style: solid;
+  border-color: #333333; /* Dark gray */
+  background-color: #333333; /* Dark gray */
+  border-radius: 20px 20px;
+  color: #ffffff; /* White */
+  font-size: 16px;
 }
 
 input[class="seminp"] {
   padding: 10px;
   margin: 5px;
 }
-
 
 button {
   display: flex;
@@ -128,10 +127,10 @@ button {
   width: 150px;
   height: 30px;
   border-style: solid;
-  border-color: white;
-  background-color: white;
+  border-color: #1c3a56; /* Dark blue */
+  background-color: #1c3a56; /* Dark blue */
   border-radius: 20px 20px;
-  color: #008ad8;
+  color: #ffffff; /* White */
   font-size: 16px;
 }
 
@@ -140,18 +139,9 @@ button[id="sumbitsem"] {
   padding: 5px;
 }
 
-
-
-
-
 /* Position the buttons */
-
 
 img {
   width: 30px;
   height: 30px;
 }
-
-
-
-

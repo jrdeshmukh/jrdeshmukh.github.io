@@ -1,15 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 
-* {
-  font-family: "Poppins", sans-serif;
+
+*{
+   font-weight: 900;
+   font-family: 'Poppins', sans-serif;
+   
 }
-
-@media only screen and (min-width: 0px) {
-  html {
-    zoom: 0.5;
-  }
-}
-
 .class-container {
   display: flex;
   flex-direction: row; /* Change to row to place them side by side */
@@ -29,25 +25,10 @@ body {
   background-color: #0d1321;  /*Dark gray */
 }
 
-/* Set font and background color */
-@media only screen and (min-width: 600px) {
-  html {
-    zoom: 0.6;
-  }
-}
 
-@media only screen and (min-width: 1100px) {
-  html {
-    zoom: 1;
-  }
+#unweighted, #nunweighted {
+  display: none;
 }
-
-@media only screen and (min-width: 1600px) {
-  html {
-    zoom: 1.25;
-  }
-}
-
 
 ul {
   text-align: center;
@@ -76,12 +57,14 @@ label {
   display: inline-block;
   list-style: inside;
   margin-right: auto;
+  font-size: 1rem;
   margin-left: auto;
   align-items: center;
+  margin:0.3rem;
   justify-content: center;
-  background-color: #333333; /* Dark gray */
+  background: #333333;
   color: #ffffff; /* White */
-  padding: 10px;
+  padding: 0.5rem;
   border-radius: 10px; /* Rounded corners */
 }
 
@@ -92,6 +75,11 @@ h1 {
   color: #ffffff; /* White */
   font-size: 40px;
   font-weight: 600;
+}
+
+#submit {
+  background: linear-gradient(135deg, #2e5496 0%, #df8940 100%);
+  border-color: #0d1321;
 }
 
 /* Style the join room button */
@@ -123,7 +111,12 @@ button {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin: 0 10px; /* Adjust spacing between button elements */
+  margin: 0.3rem; /* Adjust spacing between button elements */
+  min-width: 160px;
+  padding: 0.2rem;
+  align-items: center;
+  cursor: pointer;
+  margin: 0.3rem; /* Adjust spacing between button elements */
   width: 150px;
   height: 30px;
   border-style: solid;
@@ -134,10 +127,6 @@ button {
   font-size: 16px;
 }
 
-button[id="sumbitsem"] {
-  margin: 5px;
-  padding: 5px;
-}
 
 /* Position the buttons */
 

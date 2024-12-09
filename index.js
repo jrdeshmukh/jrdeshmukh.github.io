@@ -14,6 +14,14 @@ function toggleExtra() {
   nuw.style.display = shown ? 'block' : 'none'
 }
 
+
+/*var pastething = document.getElementsByClassName("pastething");
+pastething.addEventListener('paste', (event) => {
+  console.log("d")
+});*/
+
+
+
 document.addEventListener('DOMContentLoaded', myFunction);
 function myFunction() {
   let arr;

@@ -17,12 +17,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  margin: 0;
+  margin: 0.5rem;
   zoom: 150%;
   background-color: #1e1e1e; /* Dark gray */
   width: device-width;
-  background-color: #0d1321;  /*Dark gray */
+  background-color: #0b0c15;  /*Dark gray */
 }
 
 
@@ -62,7 +61,12 @@ label {
   align-items: center;
   margin:0.3rem;
   justify-content: center;
-  background: #333333;
+  background: #0f0f21;
+  border-style: solid;
+  border-color: #3c588f; /* Dark gray */
+  border-radius: 12px;
+  border-width: 3px;
+ 
   color: #ffffff; /* White */
   padding: 0.5rem;
   border-radius: 10px; /* Rounded corners */
@@ -71,16 +75,13 @@ label {
 /* Style the heading */
 h1 {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 0px;
   color: #ffffff; /* White */
   font-size: 40px;
   font-weight: 600;
 }
 
-#submit {
-  background: linear-gradient(135deg, #2e5496 0%, #df8940 100%);
-  border-color: #0d1321;
-}
+
 
 /* Style the join room button */
 /* Style the leave room button */
@@ -94,17 +95,15 @@ select {
   width: 150px; /* Adjust width as needed */
   height: 30px;
   border-style: solid;
-  border-color: #333333; /* Dark gray */
-  background-color: #333333; /* Dark gray */
-  border-radius: 20px 20px;
+  border-color: #3c588f; /* Dark gray */
+  background-color: #0b0c15; /* Dark gray */
+  border-radius: 12px;
+  border-width: 2px;
+
   color: #ffffff; /* White */
   font-size: 16px;
 }
 
-input[class="seminp"] {
-  padding: 10px;
-  margin: 5px;
-}
 
 button {
   display: flex;
@@ -122,7 +121,7 @@ button {
   border-style: solid;
   border-color: #1c3a56; /* Dark blue */
   background-color: #1c3a56; /* Dark blue */
-  border-radius: 20px 20px;
+  border-radius: 10px;
   color: #ffffff; /* White */
   font-size: 16px;
 }
@@ -134,3 +133,23 @@ img {
   width: 30px;
   height: 30px;
 }
+
+#submit {
+  background: linear-gradient(135deg, #2e5496 0%, #df8940 100%);
+  border: none;
+}
+
+
+
+#background {
+  display: none;;
+  /*position: relative;  Ensure it is positioned relative to the body or parent 
+  top: 19.5rem;
+  left: 19rem;
+  width: 40%;  Make it span the entire container width 
+  height: 51%;  Make it span the entire container height 
+  z-index: -1;  Place it behind other elements 
+  border-radius: 10px;
+  background: #1b1e2b;*/
+}
+
